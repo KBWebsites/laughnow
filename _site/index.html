@@ -1,0 +1,143 @@
+<!-- Jai Shree Shyam -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="img/large-emoji.png"/>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Laughnow</title>
+</head>
+<body>
+  <div id="main">
+  <button id="openbtn" class="openbtn">&#9776; Menu</button>
+  <a href="awards.html"><button id="btn-right" class="btn-right"> Awards 🏆</button></a>
+</div>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+  <div class="flexbox">
+  <img src="img/large-emoji.png" width="40%" class="emoji-nav">
+  <p style="color: #FFE500;">Keep Laughing</p>
+  </div>
+  <div style="padding-top: 40px;">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="submit.html">Submit</a>
+  <a href="app.html">Laughnow App</a>
+  <a href="https://teespring.com/stores/laughnow">Merchandise</a>  
+  <a href="contact.html">Contact</a>
+</div>
+</div>
+<h1 class="heading-center" style="font-size: 48px;">LAUGHNOW</h1>
+<h3 class="heading-center">The best of internet in one place</h3>
+
+<!-- Jai Shree Shyam -->
+<div class="row" id="category-emoji">
+  <div class="flexbox" id="myDiv">
+  		<div class="btn">
+    	<img src="img/emoji/dark.png" onclick="dark()" id="dark" class="category"><h3>Dark</h3>
+    	</div>
+    	<div class="btn">
+    	<img src="img/emoji/cool.png" onclick="cool()" id="cool" class="category active"><h3>Cool</h3>
+    	</div>
+    	<div class="btn">
+    	<img src="img/emoji/cute.png" onclick="cute()" id="cute" class="category"><h3>Cute</h3>
+		</div>
+  </div>
+</div>
+</div>
+<h1 class="center">Latest</h1>
+<div id="vid">
+<div class="videos" id="clvideos" style="">
+  <p>Cool Videos</p>
+<script src="https://cdn.jwplayer.com/players/ZJWs029H-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/1pm3TrZ1-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/Usqz5Opd-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/UDPqenxQ-CctXk47W.js"></script>
+<br><br><br>
+</div>
+<div class="videos" id="ctvideos">
+  <p>Cute Videos</p>
+<script src="https://cdn.jwplayer.com/players/rpueA2Mi-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/XPQsuqM6-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/lqXrh2R5-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/ELVW54PW-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/IMQ2Ak0Z-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/TIL3Muk3-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/xaTwujlk-CctXk47W.js"></script>
+<br><br><br>
+</div>
+<div class="videos" id="dkvideos">
+  <p style="text-align: center; color: red;">Viewer Discretion is Advised*</p>
+  <p>Dark Videos</p>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/rXd0xrLO-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/vc0MXZHp-CctXk47W.js"></script>
+<br><br><br>
+<script src="https://cdn.jwplayer.com/players/VeP0rxy2-CctXk47W.js"></script>
+<br><br><br>
+
+<br><br><br>
+
+<br><br><br>
+</div>
+</div>
+<p class="center">Oops! Looks like that's the end of good content for now, come back later for more videos.</p>
+<script type="text/javascript">
+  var vid = document.getElementById('vid')
+  var dk = document.getElementById('dkvideos')
+  var ct = document.getElementById('ctvideos')
+  var cl = document.getElementById('clvideos')
+
+  function removeall() {
+    document.getElementById("dark").classList.remove('active')
+    document.getElementById("cute").classList.remove('active')
+    document.getElementById("cool").classList.remove('active')
+  }
+  function removevid() {
+    try {
+      vid.removeChild(dk)
+    } catch (err) { }
+    try {
+      vid.removeChild(ct)
+    } catch (err) { }
+    try {
+      vid.removeChild(cl)
+    } catch (err) { }
+  }
+  function dark() {
+    removeall()
+    document.getElementById("dark").classList.add('active')
+    removevid()
+    vid.appendChild(dk)
+    document.getElementById('dkvideos').style.visibility("visible")
+  }
+  function cute() {
+    removeall()
+    document.getElementById("cute").classList.add('active')
+    removevid()
+    vid.appendChild(ct)
+    document.getElementById('ctvideos').style.visibility("visible")
+  }
+  function cool() {
+    removeall()
+    document.getElementById("cool").classList.add('active')
+    removevid()
+    vid.appendChild(cl)
+  }
+</script>
+
+</body>
+</html>
+<script type="text/javascript" src="js/main.js"></script>

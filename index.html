@@ -1,0 +1,76 @@
+---
+title: Laughnow
+layout: default
+---
+<!-- Jai Shree Shyam -->
+<div class="row" id="category-emoji">
+  <div class="flexbox" id="myDiv">
+  		<div class="btn">
+    	<img src="img/emoji/dark.png" onclick="dark()" id="dark" class="category"><h3>Dark</h3>
+    	</div>
+    	<div class="btn">
+    	<img src="img/emoji/cool.png" onclick="cool()" id="cool" class="category active"><h3>Cool</h3>
+    	</div>
+    	<div class="btn">
+    	<img src="img/emoji/cute.png" onclick="cute()" id="cute" class="category"><h3>Cute</h3>
+		</div>
+  </div>
+</div>
+</div>
+<h1 class="center">Latest</h1>
+<div id="vid">
+<div class="videos" id="clvideos" style="">
+  {% include cool.html %}
+</div>
+<div class="videos" id="ctvideos">
+  {% include cute.html %}
+</div>
+<div class="videos" id="dkvideos">
+  <p style="text-align: center; color: red;">Viewer Discretion is Advised*</p>
+  {% include dark.html %}
+</div>
+</div>
+<p class="center">Oops! Looks like that's the end of good content for now, come back later for more videos.</p>
+<script type="text/javascript">
+  var vid = document.getElementById('vid')
+  var dk = document.getElementById('dkvideos')
+  var ct = document.getElementById('ctvideos')
+  var cl = document.getElementById('clvideos')
+
+  function removeall() {
+    document.getElementById("dark").classList.remove('active')
+    document.getElementById("cute").classList.remove('active')
+    document.getElementById("cool").classList.remove('active')
+  }
+  function removevid() {
+    try {
+      vid.removeChild(dk)
+    } catch (err) { }
+    try {
+      vid.removeChild(ct)
+    } catch (err) { }
+    try {
+      vid.removeChild(cl)
+    } catch (err) { }
+  }
+  function dark() {
+    removeall()
+    document.getElementById("dark").classList.add('active')
+    removevid()
+    vid.appendChild(dk)
+    document.getElementById('dkvideos').style.visibility("visible")
+  }
+  function cute() {
+    removeall()
+    document.getElementById("cute").classList.add('active')
+    removevid()
+    vid.appendChild(ct)
+    document.getElementById('ctvideos').style.visibility("visible")
+  }
+  function cool() {
+    removeall()
+    document.getElementById("cool").classList.add('active')
+    removevid()
+    vid.appendChild(cl)
+  }
+</script>
